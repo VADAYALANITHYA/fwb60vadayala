@@ -1,0 +1,8 @@
+extends layout
+block content
+  h1= title
+  - let zoos = [{animalName:"Lion" , animalAge: 15, animalType : "cats"},{animalName:"Snake", animalAge: 10, animalType: "reptile"},{animalName:"WoodPecker",animalAge: 5, animalType: "Bird"}]
+  div(class="container-fluid mt-3")
+  div(class="row")
+    each zoo,index in zoos
+        div(class="col-sm-4")  #{zoo.animalName} -  #{zoo.animalAge} - #{zoo.animalType} 
