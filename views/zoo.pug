@@ -5,4 +5,9 @@ block content
   div(class="container-fluid mt-3")
   div(class="row")
     each zoo,index in zoos
-        div(class="col-sm-4")  #{zoo.animalName} -  #{zoo.animalAge} - #{zoo.animalType} 
+        div(class="col-sm-4" onclick=`buy(${index})`)  #{zoo.animalName} -  #{zoo.animalAge} - #{zoo.animalType} 
+    script.
+      function buy(itemNo)
+      {
+        alert(`You purchased Item ${itemNo+1}`)
+      } 
